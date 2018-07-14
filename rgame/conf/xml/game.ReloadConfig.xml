@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tree-map>
+	<no-comparator/>
+	<entry>
+		<int>1</int>
+		<game.ReloadConfig>
+			<id>1</id>
+			<type>1</type>
+			<moduleType>0</moduleType>
+			<name>sys.properties</name>
+		</game.ReloadConfig>
+	</entry>
+	<entry>
+		<int>2</int>
+		<game.ReloadConfig>
+			<id>2</id>
+			<type>2</type>
+			<moduleType>0</moduleType>
+			<name>game.SSkillConfig.xml</name>
+		</game.ReloadConfig>
+	</entry>
+	<entry>
+		<int>3</int>
+		<game.ReloadConfig>
+			<id>3</id>
+			<type>3</type>
+			<moduleType>1</moduleType>
+		</game.ReloadConfig>
+	</entry>
+</tree-map>

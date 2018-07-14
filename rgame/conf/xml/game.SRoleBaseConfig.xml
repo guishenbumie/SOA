@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tree-map>
+	<no-comparator/>
+	<entry>
+		<int>1</int>
+		<game.SRoleBaseConfig>
+			<id>1</id>
+			<school>11</school>
+			<name>剑士</name>
+		</game.SRoleBaseConfig>
+	</entry>
+	<entry>
+		<int>2</int>
+		<game.SRoleBaseConfig>
+			<id>2</id>
+			<school>12</school>
+			<name>法师</name>
+		</game.SRoleBaseConfig>
+	</entry>
+</tree-map>

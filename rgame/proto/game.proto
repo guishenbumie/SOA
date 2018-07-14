@@ -1,0 +1,111 @@
+syntax = "proto3";
+
+option java_package = "proto";
+option java_outer_classname = "MainProto";
+
+message Send{
+    int32 userId = 1;
+    int32 gateId = 2;
+    ProtoType type = 3;
+
+    enum ProtoType{
+        Error = 0;
+
+        GRConnect = 11;
+        RGConnectRes = 12;
+        GRKick = 13;
+
+        CGConnect = 101;
+        GCConnectRes = 102;
+
+        CRoleList = 1001;
+        SRoleList = 1002;
+        CEnterWord = 1003;
+        SEnterWord = 1004;
+        SGameTime = 1005;
+        CClientHeart = 1006;
+    }
+
+    oneof data{
+        GRConnect gRConnect = 11;
+        RGConnectRes rGConnectRes = 12;
+        CGConnect cGConnect = 101;
+        GCConnectRes gCConnectRes = 102;
+        CRoleList cRoleList = 1001;
+        SRoleList sRoleList = 1002;
+        CEnterWord cEnterWord = 1003;
+        SEnterWord sEnterWord = 1004;
+        SGameTime sGameTime = 1005;
+        CClientHeart cClientHeart = 1006;
+    }
+}
+
+message GRConnect{
+    int32 gateId = 1;
+}
+
+message RGConnectRes{
+    Result result = 1;
+    enum Result{
+        UNKNOWN = 0;
+        REPEAT = 1;
+        SUCCESS = 2;
+    }
+}
+
+message GRKick{
+}
+
+
+
+message CGConnect{
+}
+
+message GCConnectRes{
+    Result result = 1;
+    enum Result{
+        UNKNOWN = 0;
+        REPEAT = 1;
+        SUCCESS = 2;
+    }
+}
+
+
+
+message CRoleList{
+}
+
+message SRoleList{
+    repeated int64 roleIds = 1;
+}
+
+message CEnterWord{
+    int64 roleId = 1;
+}
+
+message SEnterWord{
+    int64 roleId = 1;
+    string roleName = 2;
+    SchoolType school = 3;
+    repeated int32 friendIds = 4;
+    repeated XiakeInfo xiakes = 5;
+
+    enum SchoolType{
+        NULL = 0;
+        JIANSHI = 1;
+        FASHI = 2;
+        NAIMA = 3;
+    }
+
+    message XiakeInfo{
+        int32 xiakeId = 1;
+        string xiakeName = 2;
+    }
+}
+
+message SGameTime{
+    int64 serverTime = 1;
+}
+
+message CClientHeart{
+}

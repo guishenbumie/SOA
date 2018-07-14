@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="false" scan="true" scanPeriod="30 seconds" packagingData="true">
+    <!-- 设置 logger context 名称,一旦设置不可改变，默认为default -->
+    <contextName>myAppName</contextName>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>sgame: %d{HH:mm:ss.SSS} [%-5level] [%thread] - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!--<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">-->
+        <!--&lt;!&ndash; 当前活动日志文件名 &ndash;&gt;-->
+        <!--<file>./my_log.log</file>-->
+        <!--&lt;!&ndash; 文件滚动策略根据%d{patter}中的“patter”而定，此处为每天产生一个文件 &ndash;&gt;-->
+        <!--<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">-->
+            <!--&lt;!&ndash; 归档文件名“.zip或.gz结尾”,表示归档文件自动压缩 &ndash;&gt;-->
+            <!--<FileNamePattern>./my_log%d{yyyyMMdd}.log.zip</FileNamePattern>-->
+            <!--<maxHistory>30</maxHistory>-->
+        <!--</rollingPolicy>-->
+
+        <!--<encoder>-->
+             <!--<pattern>%d{HH:mm:ss.SSS}[%-5level][%thread] - %msg%n</pattern> -->
+        <!--</encoder>-->
+    <!--</appender>-->
+
+    <!-- 至多只能配置一个root -->
+    <root level="debug">
+        <appender-ref ref="STDOUT" />
+        <!--<appender-ref ref="FILE" />-->
+    </root>
+</configuration>

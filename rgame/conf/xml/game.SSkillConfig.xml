@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tree-map>
+	<no-comparator/>
+	<entry>
+		<int>1</int>
+		<game.SSkillConfig>
+			<id>1</id>
+			<school>11</school>
+			<name>万剑归宗</name>
+		</game.SSkillConfig>
+	</entry>
+	<entry>
+		<int>2</int>
+		<game.SSkillConfig>
+			<id>2</id>
+			<school>12</school>
+			<name>乾坤大挪移</name>
+		</game.SSkillConfig>
+	</entry>
+</tree-map>
